@@ -1,0 +1,20 @@
+<div class="row" style="margin-top: 75px;">
+  <div class="col-md-2"><input type="text" style="width: 100%;" placeholder="Enter post id to edit" [(ngModel)]="id" class="form-control"/></div>
+  <div class="col-md-5"><input type="text" style="width: 100%;" placeholder="Enter new post content" [(ngModel)]="content" class="form-control"/></div>
+  <div class="col-md-1"><button class="btn btn-warning ml-0" (click)="editPost()">Update</button></div>
+  </div>
+  
+  <div class="col-md-8" style="padding: 15px;">
+      <hr class="bg-dark"/>
+      <h6>HTTP Service URL: <span class="text-info">{{serviceUrl}}</span></h6>
+      <h6 class="mt-3">HTTP Method: <span class="text-warning">PUT</span></h6>
+      
+      <h6 class="mt-3">Request Body: </h6>
+      <pre class="jsonFormat bg-dark text-white">{{requestBody}}</pre>
+      
+      <hr class="bg-dark"/>
+      
+      <h6 class="mt-3">HTTP status code: <span [class]="responseClass">{{responseCode}}</span></h6>
+      <h6 class="mt-3">Response Body:</h6>
+      <pre class="jsonFormat bg-info text-white">{{responseBody}}</pre>
+  </div>
